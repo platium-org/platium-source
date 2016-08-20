@@ -1,5 +1,5 @@
 {
-  "name": "Sydyk-env",
+  "name": "org-env",
   "containers": [
     {
       "size": "small",
@@ -8,10 +8,11 @@
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     },
     {
-      "size": "small",
+      "size": "tiny",
       "templateName": "master",
       "name": "sydyk-2-test",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     }
+
   ]
 }
