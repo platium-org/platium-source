@@ -2,7 +2,7 @@
   "name": "org-env",
   "containers": [
     {
-      "size": "small",
+      "size": "tiny",
       "templateName": "master",
       "name": "sydyk-1-test",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
@@ -12,7 +12,12 @@
       "templateName": "master",
       "name": "sydyk-2-test",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
+    },
+    {
+      "size": "tiny",
+      "templateName": "master",
+      "name": "sydyk-3-test",
+      "templateId": "a697e70f3fc538b4f4763588a7868388"
     }
-
   ]
 }
