@@ -1,16 +1,16 @@
 {
-  "name": "MyFirstBlueprint2",
+  "name": "Sydyk-env",
   "containers": [
     {
-      "size": "tiny",
+      "size": "small",
       "templateName": "master",
-      "name": "master-1-test",
+      "name": "sydyk-1-test",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     },
     {
       "size": "small",
       "templateName": "master",
-      "name": "master-2-test",
+      "name": "sydyk-2-test",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     }
   ]
