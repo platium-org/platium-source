@@ -18,6 +18,18 @@
       "templateName": "master",
       "name": "blueprint-3",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
+    },
+    {
+      "size": "tiny",
+      "templateName": "master",
+      "name": "blueprint-2",
+      "templateId": "a697e70f3fc538b4f4763588a7868388"
+    },
+    {
+      "size": "tiny",
+      "templateName": "master",
+      "name": "blueprint-3",
+      "templateId": "a697e70f3fc538b4f4763588a7868388"
     }
   ]
 }
