@@ -1,5 +1,5 @@
 {
-  "name": "org-env",
+  "name": "Environment-via-blueprint",
   "containers": [
     {
       "size": "tiny",
