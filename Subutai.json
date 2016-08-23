@@ -4,19 +4,19 @@
     {
       "size": "tiny",
       "templateName": "master",
-      "name": "sydyk-1-test",
+      "name": "blueprint-1",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     },
     {
       "size": "tiny",
       "templateName": "master",
-      "name": "sydyk-2-test",
+      "name": "blueprint-2",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     },
     {
       "size": "tiny",
       "templateName": "master",
-      "name": "sydyk-3-test",
+      "name": "blueprint-3",
       "templateId": "a697e70f3fc538b4f4763588a7868388"
     }
   ]
