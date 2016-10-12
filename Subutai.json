@@ -1,35 +1,47 @@
 {
-  "name": "Environment-via-blueprint",
-  "containers": [
+  "name": "My-Cassandra-cluster",
+  "nodes": [
     {
-      "size": "tiny",
-      "templateName": "master",
-      "name": "blueprint-1",
-      "templateId": "a697e70f3fc538b4f4763588a7868388"
+      "name": "cassandra_seed_1",
+      "template": "cassandra",
+      "peer_group": "US-GROUP"
     },
     {
-      "size": "tiny",
-      "templateName": "master",
-      "name": "blueprint-2",
-      "templateId": "a697e70f3fc538b4f4763588a7868388"
+      "name": "cassandra_seed_2",
+      "template": "cassandra",
+      "peer_group": "US-GROUP"
     },
     {
-      "size": "tiny",
-      "templateName": "master",
-      "name": "blueprint-3",
-      "templateId": "a697e70f3fc538b4f4763588a7868388"
+      "name": "cassandra_data_1",
+      "template": "cassandra",
+      "peer_group": "US-GROUP"
     },
     {
-      "size": "tiny",
-      "templateName": "master",
-      "name": "blueprint-4",
-      "templateId": "a697e70f3fc538b4f4763588a7868388"
-    },
-    {
-      "size": "tiny",
-      "templateName": "master",
-      "name": "blueprint-5",
-      "templateId": "a697e70f3fc538b4f4763588a7868388"
+      "name": "cassandra_data_2",
+      "template": "cassandra",
+      "peer_group": "US-GROUP"
     }
-  ]
+  ],
+  "peer_groups": [
+    {
+      "name": "US-GROUP",
+      "pricing_pref": {},
+      "hw_pref": {},
+      "zone_pref": {},
+      "proximity_pref": {}
+    },
+    {
+      "name": "EU-GROUP"
+    }
+  ],
+  "configuration": {
+    "plugin": "cassandra",
+    "params":
+      {
+        "seeds": "cassandra_seed_1,cassandra_seed_2",
+         "dataDirectory": "/var/lib/cassandra/data",
+        "commitLogDirectory": "/var/lib/cassandra/commitlog",
+        "savedCachesDirectory": "/var/lib/cassandra/saved_caches"
+      }
+  }
 }
