@@ -23,7 +23,7 @@
 	    "maxPrice": "20"
 	},
 	"hwPreferences": {
-	    "avgCpuLoad": "50",
+	    "avgCpuLoad": "10",
 	    "minFreeRam": "128MiB",
 	    "minFreeDiskSpace": "500MiB"
 	},
