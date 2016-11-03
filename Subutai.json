@@ -1,5 +1,5 @@
 {
-    "name": "My-mongo-cluster",
+    "name": "sydyk",
     "description": "The sample Mongo cluster",
     "nodes": [{
 	"name": "mongo-1",
