@@ -1,47 +1,43 @@
 {
-  "name": "My-Cassandra-cluster",
-  "nodes": [
-    {
-      "name": "cassandra_seed_1",
-      "template": "cassandra",
-      "peer_group": "US-GROUP"
-    },
-    {
-      "name": "cassandra_seed_2",
-      "template": "cassandra",
-      "peer_group": "US-GROUP"
-    },
-    {
-      "name": "cassandra_data_1",
-      "template": "cassandra",
-      "peer_group": "US-GROUP"
-    },
-    {
-      "name": "cassandra_data_2",
-      "template": "cassandra",
-      "peer_group": "US-GROUP"
+    "name": "My-mongo-cluster",
+    "description": "The sample Mongo cluster",
+    "nodes": [{
+	"name": "mongo-1",
+	"template": "mongo",
+	"peer_group": "US-GROUP",
+	"size": "LARGE"
+    }, {
+	"name": "mongo-2",
+	"template": "mongo",
+	"peer_group": "EU-GROUP",
+	"size": "LARGE"
+    }, {
+	"name": "mongo-3",
+	"template": "mongo",
+	"peer_group": "US-GROUP",
+	"size": "LARGE"
+    }],
+    "peerGroups": [{
+	"name": "US-GROUP",
+	"pricingPref": {
+	    "maxPrice": "20"
+	},
+	"hwPreferences": {
+	    "avgCpuLoad": "50",
+	    "minFreeRam": "128MiB",
+	    "minFreeDiskSpace": "500MiB"
+	},
+	"zonePreferences": {},
+	"proximityPreferences": {}
+    }, {
+	"name": "EU-GROUP"
+    }],
+    "sshKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQNXl+vAiN9GsWSXys58pk8ogrn/BjTy+WdCju4XYfgKbjBAL37eei+I6fTBJ42jZ5Y1irq/H5wPYeNt55VVdOonJJ52YLDnCs66PPUID8zXFn5aQv9Ti9k+qxZX6/3Rbx7FhKyxNP1SOZ9TcQVLPlZtY3o6yfxp32Wf92A14iHUY80XWkLhe6BeKWM68DKLfafNIcRD30jRh0vtyUQaTOV9VC+g3nX1AKcVnLufvXaJ4144ZsJSRDbxJDT2WxVgazkCGvG7ki0qQzfTnRUbFbd9l5DDET42QpLu4z5fI1LN/I+ickz6WKJjs4yvZQcfwHGipaJdQhf3Gco0JvpsNf root@spc",
+    "configuration": {
+	"plugin": "mongo",
+	"params": {
+	    "clusterName": "mongoCluster",
+	    "replicaSetName": "repl0"
+	}
     }
-  ],
-  "peer_groups": [
-    {
-      "name": "US-GROUP",
-      "pricing_pref": {},
-      "hw_pref": {},
-      "zone_pref": {},
-      "proximity_pref": {}
-    },
-    {
-      "name": "EU-GROUP"
-    }
-  ],
-  "configuration": {
-    "plugin": "cassandra",
-    "params":
-      {
-        "seeds": "cassandra_seed_1,cassandra_seed_2",
-         "dataDirectory": "/var/lib/cassandra/data",
-        "commitLogDirectory": "/var/lib/cassandra/commitlog",
-        "savedCachesDirectory": "/var/lib/cassandra/saved_caches"
-      }
-  }
 }
