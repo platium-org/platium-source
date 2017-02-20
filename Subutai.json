@@ -1,5 +1,5 @@
 {
-    "name": "Task-Management-Application",
+    "name": "Sydyk",
     "description": "Task Management Application",
     "nodes": [{
         "name": "taskapp-1",
