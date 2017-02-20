@@ -1,5 +1,5 @@
 {
-    "name": "Sydyk",
+    "name": "Sydyk-stage",
     "description": "Task Management Application",
     "nodes": [{
         "name": "taskapp-1",
